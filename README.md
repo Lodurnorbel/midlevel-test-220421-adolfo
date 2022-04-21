@@ -23,7 +23,7 @@ FakeSolar had integrations with multiple softwares, but they don't want that all
 
 - They will provide all the inspections available in FakeSolar system in the inspections endpoint
 - In the inspectors endpoint, they added a field called "availableIntegrations". That field contains a list with the integrations where the data of that inspector should be displayed. They assigned us the code "SolarGrade".
-- We should only display the inspections from the inspectors that are available to "SolarGrade".
+- We must **only display** the inspections from the inspectors that are **available to "SolarGrade"**.
 
 #### Inspections Endpoint
 
@@ -95,12 +95,12 @@ FakeSolar had integrations with multiple softwares, but they don't want that all
 
 ### Acceptance criteria
 - The endpoint returns the desired model
-- The endpoint will return the data from the external system only if we are filtering data of FakeSolar. Otherwise we'll return data from the DB and filter by the "Company" value.
+- The endpoint will **return the data from the external system only if we are filtering data of FakeSolar**. Otherwise we'll return data from the DB and filter by the "Company" value.
 	- You'll need to add the model to the ORM and add a valid migration. Is not needed to populate the database with data.
 - The data is dislayed in a table
 - If the inspection is in warning state, the row in the table will be displayed yellow; if it's in critial state will be displayed red. If a inspection has critical issues, his status will be critical. If not, but have warning ones, will be warning.
 - In the top of the table, will be a small dashboard with the total inspections and issues of each type of issue/inspection.
-- You added all the pip requirements to a requirements.txt file (if you don't know how to doit, you can list all the pip packages that will be required to install in order to have the backend running)
+- You added all the pip requirements to a **requirements.txt** file (if you don't know how to doit, you can list all the pip packages that will be required to install in order to have the backend running)
 - The data mapping requirements are fulfilled.
 
 
