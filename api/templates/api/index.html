@@ -1,0 +1,8 @@
+
+{% if inspections_list %}
+    <ul>
+    {% for inspections in inspections_list %}
+        <li>{{ inspections.title }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
